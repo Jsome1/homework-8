@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 100px;
 }
 
 .task {
@@ -19,6 +20,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* Button */
 
 .neo-btn {
   padding: 30px 90px;
@@ -32,11 +35,85 @@ body {
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.35),
     -6px -6px 12px rgba(255, 255, 255, 0.7);
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-  transition: all 0.2s ease;
+  transition: box-shadow 0.2s ease, text-shadow 0.2s ease;
 }
 
 .neo-btn:active {
   box-shadow: inset 8px 8px 16px rgba(0, 0, 0, 0.35),
     inset -6px -6px 12px rgba(255, 255, 255, 0.7);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Card */
+
+.card {
+  width: 320px;
+  background-color: #ffffff;
+  border: 2px solid #f3f3f3;
+  transition: box-shadow 1s ease;
+}
+
+.card-img {
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  display: block;
+  transition: transform 1s ease, filter 1s ease;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  margin: 0 0 20px 0;
+  color: #7a2b1c;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: red;
+  font-size: 18px;
+}
+
+.add-btn {
+  background-color: green;
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+}
+
+.card:hover .card-img img {
+  transform: scale(1.5);
+  filter: grayscale(100%);
+}
+
+/* Text */
+
+.blink-text {
+  font-size: 140px;
+  color: red;
+  letter-spacing: 20px;
+  animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
